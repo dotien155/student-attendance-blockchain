@@ -1,0 +1,213 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;   /* cao bằng chiều cao màn hình */
+}
+
+/* Section chính chiếm hết khoảng trống */
+.App > section {
+  flex: 1;             /* đẩy footer xuống dưới */
+  display: flex;
+}
+
+.App > section .container {
+  flex: 1;
+  width: 100%;             /* chiếm hết chiều ngang */
+  margin: 0;               /* bỏ căn giữa */
+  padding: 20px 16px;
+  background-color: #f9f9f9;
+  display: flex;           /* để menu và content nằm ngang */
+}
+/* ----------------------------------------------------------------------------------------------------------- Header */
+
+.container {
+  display: flex;
+  max-width: 100%;  
+  margin: 0 auto;      /* căn giữa */
+  padding: 0 0;     /* chừa khoảng cách 2 bên */
+}
+
+.header-top {
+  align-items: center;  /* căn giữa theo trục dọc */
+  justify-content: space-between; /* logo bên trái, nav bên phải */
+  background-color: #254073;
+}
+
+.header-top img {
+  height: 49px; /* logo */
+  width: 170px;
+  padding-left: 20px;
+}
+
+.header-top nav {
+  display: flex; /* các link nằm ngang */
+  gap: 40px;  /* khoảng cách giữa các link */
+  padding: 4px 50px;
+  padding-top: 10px;
+}
+
+.header-top nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 30px;
+}
+
+.header-top nav a:hover {
+  color: #09097f;
+  /* đổi màu khi hover */
+}
+
+.header-top nav a:not(:last-child)::after {
+  content: "|";
+  margin-left: 60px;
+  color: #ccc;
+}
+
+.header-middle img {
+  height: 230px;  /* banner */
+  width: 100%;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);  /* bóng đổ */
+}
+
+/* ----------------------------------------------------------------------------------------------------- Header */
+.content-top {  
+  text-align: center;
+}
+
+.content-top h1 {
+  color: #0056b3;          
+  font-size: 38px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.content-top p {
+  color: #666;              /* xám nhạt */
+  font-size: 26px;
+  line-height: 1.6;
+  margin: 4px 0;
+}
+
+.content-middle {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  column-gap: 200px;   /* khoảng cách ngang */
+  row-gap: 50px;       /* khoảng cách dọc */
+  max-width: 800px;
+  margin: 30px 300px;   /* căn giữa ngang */
+  text-align: center;
+}
+
+
+.feature .icon {
+  font-size: 50px;   /* icon */
+  display: block;
+  margin-bottom: 12px;
+}
+
+.feature p {
+  color: #444;
+  font-size: 20px;
+  line-height: 1.3;
+}
+/* ------------------------------------------------------------------------------------------------------------------- Content  */
+
+#footer {
+  background-color: #213d70;  /* nền xanh đậm */
+  color: white;
+  padding: 20px 0;
+  margin-top: auto; /* đẩy footer xuống cuối khi dùng flex layout */
+}
+
+#footer .container {
+  display: flex;
+  justify-content: space-between; /* chia đều 2 bên */
+  align-items: flex-start;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.footer-left, .footer-right {
+  text-align: left;
+}
+
+#footer h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+#footer p {
+  margin: 5px 0;
+  font-size: 15px;
+}
+
+#footer a {
+  color: #f0f0f0;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  text-decoration: underline;
+}
+.main-content {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-left: 90px;  /* đẩy content sang phải */
+}
+
+/* -------------------------------------------------------------------------------------------------MenuLeftGiangVien */
+
+
+/* ------------------- Menu Left */
+.sidebar {
+  flex: 0 0 200px;
+  background: #fff;        /* nền trắng */
+  padding: 15px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;  /* viền nhẹ cho rõ */
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start; /* đẩy menu sát trái trong khung */
+  gap: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar .menu-item {
+  margin: 5px 0;
+}
+
+.sidebar .menu-item a {
+  display: block;
+  padding: 10px 16px;
+  color: #333;             /* chữ đen */
+  font-weight: 500;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* Item đang active */
+.sidebar .menu-item.active a {
+  background: #007bff;
+  color: #fff;
+}
+
+/* Hover */
+.sidebar .menu-item a:hover {
+  background: #f0f0f0;
+}
+
